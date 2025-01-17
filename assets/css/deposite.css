@@ -1,0 +1,367 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color1-: #89a8ba;
+    --color2-: #b3c8cf;
+    --color3-: #E5e1DA;
+    --color4-: #f1f0e8;
+    --color5-: #06141b;
+    --color6-: #11212d;
+    --color7-: #253745;
+    --color8-: #4a5c6a;
+    --color9-: #9ba8ab;
+    --color10-: #ccd0cf;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+html {
+    font-family: "Nunito", serif;
+}
+
+body {
+    background-color: var(--color10-);
+}
+
+.header .container {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 70px;
+    align-items: center;
+    background-color: var(--color4-);
+    font-family: sans-serif;
+    padding-inline: 40px;
+    /* Ensure it's above other elements */
+}
+
+/* .logo {
+    max-width: 20%;
+} */
+
+.logo-img {
+    max-width: 300%;
+}
+
+.header .navbar {
+    position: fixed;
+    /* Fixes the sidebar in place */
+    top: 70px;
+    /* Adjusted to align below the header */
+    left: 0;
+    width: 23%;
+    /* Sidebar width */
+    height: calc(100vh - 70px);
+    /* Full height minus the header */
+    background-color: var(--color4-);
+}
+
+.nav-list {
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center;
+        justify-content: center; */
+    gap: 60px;
+    margin-inline: 10px;
+}
+
+.nav-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-item .img-link {
+    width: 10%;
+}
+
+
+.nav-link {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color6-);
+    transition: 0.5s ease;
+}
+
+.navbar .nav-link:hover {
+    color: var(--color5-);
+    border-bottom: 1px solid var(--color5-);
+}
+
+.navbar .nav-sign {
+    /* visibility: hidden;
+    overflow: hidden; */
+    display: none;
+}
+
+.navbar .nav-log {
+    display: none;
+    /* visibility: hidden;
+    overflow: hidden; */
+}
+
+.header .cta {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+
+.cta .nav-toggle-btn {
+    cursor: pointer;
+    border: none;
+    visibility: hidden;
+}
+
+.nav-toggle-btn .line {
+    display: block;
+    height: 4px;
+    width: 30px;
+    background-color: var(--color5-);
+    margin-bottom: 3px;
+}
+
+.nav-toggle-btn {
+    padding: 8px 5px;
+    margin-inline-start: auto;
+
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Centers the grid horizontally */
+    align-items: center;
+    /* Centers the grid vertically */
+    
+    /* Offset for the sidebar */
+    width: calc(100% - 23%);
+    /* Adjusts main width to account for the sidebar */
+    height: calc(100vh - 70px);
+    /* Ensures the main section fits the remaining height */
+    
+    
+}
+
+main .container {
+    display: block;
+    align-content: center;
+    border-radius: 1rem;
+    text-align: center;
+}
+
+.container .currency1{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 30px;
+    padding-block: 40px;
+}
+
+#contactModal {
+    background-color: var(--color1-);
+        color: var(--color5-);
+        margin-block: 30px;
+        padding: 10px 20px;
+        text-decoration: none;
+        font-size: 1.2em;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        display: flex;
+        flex-direction: column;
+      
+        align-items: center;
+        
+}
+
+
+.email-deposit {
+    border: 2px solid black;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 1.1rem;
+    margin-block: 30px;
+    cursor: pointer;
+    text-decoration: none;
+    /* Prevent underline on text */
+}
+
+.email-deposit img {
+    pointer-events: none;
+    /* Ensure the click event works everywhere */
+}
+
+.email-deposit span {
+    color: var(--color5-);
+    pointer-events: none;
+    /* Prevent text selection when clicking */
+}
+
+
+@media (max-width: 1156px) {
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+
+        overflow: hidden;
+        visibility: hidden;
+        transition: 0.1s cubic-bezier(0.33, 0.85, 0.4, 0.96);
+        background-color: var(--color4-);
+
+    }
+
+    .nav-list {
+        display: flex;
+        flex-direction: column;
+
+        gap: 60px;
+        padding-bottom: 20px;
+    }
+
+    .navbar.active {
+        max-height: calc(100vh - 63px);
+
+        visibility: visible;
+        transition-duration: 1s;
+
+
+    }
+
+    .cta .nav-toggle-btn {
+        visibility: visible;
+    }
+
+    .header .navbar {
+        position: fixed;
+        /* Fixes the sidebar in place */
+        top: 70px;
+        /* Adjusted to align below the header */
+        left: 0;
+        width: 53%;
+        /* Sidebar width */
+        height: calc(100vh - 70px);
+        /* Full height minus the header */
+        background-color: var(--color4-);
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /* margin-top: 50%; */
+        /* Centers the grid horizontally */
+        align-items: center;
+        /* Centers the grid vertically */
+        margin-inline: auto;
+        margin-top: 30px;
+    }
+
+ 
+
+ 
+
+}
+
+@media (max-width: 599px) {
+
+    .header .container {
+        padding-inline: 10px;
+        /* Add some padding for smaller screens */
+    }
+
+    .currency1 {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        /* Stack the items vertically */
+        gap: 10px;
+        /* Add spacing between elements */
+        padding: 10px;
+        /* Add padding for better spacing */
+        width: 100%;
+        /* Ensure it takes the full width */
+        box-sizing: border-box;
+        /* Prevent overflow caused by padding */
+    }
+
+    .currency1 h1 {
+        font-size: 1rem;
+        /* Adjust the font size for smaller screens */
+        margin-bottom: 5px;
+        /* Add spacing below the heading */
+    }
+
+    .currency1 p {
+        font-size: 0.9rem;
+        /* Adjust font size for better fit */
+        word-wrap: break-word;
+        /* Break long text to prevent overflow */
+        overflow-wrap: anywhere;
+        /* Ensure it wraps properly */
+        margin: 0;
+        /* Remove unnecessary margin */
+    }
+
+    .email-deposit {
+        padding-inline: 20px;
+        /* Adjust padding to fit smaller screens */
+        width: auto;
+        /* Allow it to resize dynamically */
+    }
+
+    main {
+        margin: 0;
+        width: 100%;
+        /* Full width for mobile */
+        padding: 10px;
+        /* Add padding for spacing */
+    }
+
+    main .container {
+        margin-top: 200px;
+        /* Adjust spacing from the header */
+        width: 100%;
+        /* Full width for mobile view */
+        border: none;
+        /* Remove debug border */
+        max-width: 350px;
+    }
+}
+
+@media ( max-width: 350px) {
+    
+    .container .main-header{
+        font-size: 1.1rem;
+    }
+
+    #contactModal h1{
+        font-size: 1.1rem;
+    }
+    .img-logo{
+        width: 100%;
+    }
+}

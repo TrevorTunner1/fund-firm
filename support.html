@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/support.css">
+    <title>Support Page</title>
+
+</head>
+
+<body>
+    <header>
+        <h1>How Can We Help You?</h1>
+        <p>Find answers, get help, or contact us directly.</p>
+    </header>
+
+    <div class="search-bar">
+        <input type="text" placeholder="Search for topics or FAQs">
+    </div>
+
+    <section class="section">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq">
+            <h3>How do I reset my password?</h3>
+            <p>To reset your password, go to the login page and click "Forgot Password." Follow the instructions sent to
+                your email.</p>
+        </div>
+        <div class="faq">
+            <h3>What are the fees for withdrawals?</h3>
+            <p>Our platform charges a small fee of 1% for withdrawals. Please check our terms for more details.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Contact Us</h2>
+        <div class="contact">
+            <div>
+                <h3>Live Chat</h3>
+                <p>Available 24/7</p>
+            </div>
+            <div>
+                <h3>Email Support</h3>
+                <p><a href="mailto:support@example.com">support@example.com</a></p>
+            </div>
+            <div>
+                <h3>Phone Support</h3>
+                <p>+123 456 7890</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Submit a Request</h2>
+        <form class="support-ticket">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <select>
+                <option value="">Select Issue Category</option>
+                <option value="account">Account Management</option>
+                <option value="investment">Investment</option>
+                <option value="security">Security</option>
+            </select>
+            <textarea rows="5" placeholder="Describe your issue" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Your Brand Name. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.faq h3').forEach(faq => {
+            faq.addEventListener('click', () => {
+                const answer = faq.nextElementSibling;
+                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+    </script>
+</body>
+
+</html>

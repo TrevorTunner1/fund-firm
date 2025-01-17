@@ -1,0 +1,145 @@
+/* Global Reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Root Color Palette */
+:root {
+    --color1-: #89a8ba;
+    --color2-: #b3c8cf;
+    --color3-: #E5e1DA;
+    --color4-: #f1f0e8;
+    --color5-: #06141b;
+    --color6-: #11212d;
+    --color7-: #253745;
+    --color8-: #4a5c6a;
+    --color9-: #9ba8ab;
+    --color10-: #ccd0cf;
+}
+
+/* Basic Styling */
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: "Nunito", sans-serif;
+    background: linear-gradient(to right, var(--color3-), var(--color8-));
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Heading Styling */
+.container h1 {
+    text-align: center;
+    color: var(--color5-);
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+}
+
+/* Form Section */
+.form-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    background-color: var(--color4-);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Image */
+.form-image {
+    max-width: 400px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Form Styling */
+.form {
+    width: 100%;
+    max-width: 500px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1.1rem;
+    color: var(--color5-);
+    margin-bottom: 8px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--color9-);
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: var(--color10-);
+    color: var(--color5-);
+}
+
+.form-group input:focus {
+    border-color: var(--color1-);
+    outline: none;
+}
+
+/* Button */
+.btn-primary {
+    background-color: var(--color1-);
+    color: var(--color5-);
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--color2-);
+}
+
+.form-cta {
+    display: block;
+    justify-content: flex-start;
+
+    align-items: center;
+
+}
+
+.form-cta button {
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 768px) {
+    .form-section {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .form-section img {
+        display: none;
+    }
+
+    .form-section img {
+        max-width: 100%;
+    }
+}

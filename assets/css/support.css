@@ -1,0 +1,136 @@
+ :root {
+     --color1: #89a8ba;
+     --color2: #b3c8cf;
+     --color3: #E5e1DA;
+     --color4: #f1f0e8;
+     --color5: #06141b;
+     --color6: #11212d;
+     --color7: #253745;
+     --color8: #4a5c6a;
+     --color9: #9ba8ab;
+     --color10: #ccd0cf;
+ }
+
+ body {
+     font-family: Arial, sans-serif;
+     margin: 0;
+     padding: 0;
+     background-color: var(--color4);
+     color: var(--color7);
+ }
+
+ header {
+     background-color: var(--color6);
+     color: var(--color4);
+     text-align: center;
+     padding: 20px;
+ }
+
+ header h1 {
+     margin: 0;
+     font-size: 2rem;
+ }
+
+ header p {
+     margin: 5px 0 20px;
+     font-size: 1rem;
+ }
+
+ .search-bar {
+     text-align: center;
+     margin: 20px;
+ }
+
+ .search-bar input {
+     width: 80%;
+     max-width: 600px;
+     padding: 10px;
+     border: 1px solid var(--color9);
+     border-radius: 5px;
+ }
+
+ .section {
+     margin: 20px;
+     padding: 20px;
+     background-color: var(--color3);
+     border-radius: 5px;
+     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+ }
+
+ .section h2 {
+     font-size: 1.5rem;
+     margin-bottom: 10px;
+ }
+
+ .faq {
+     margin: 10px 0;
+ }
+
+ .faq h3 {
+     cursor: pointer;
+     font-size: 1.2rem;
+     margin: 10px 0;
+     background-color: var(--color2);
+     padding: 10px;
+     border-radius: 5px;
+ }
+
+ .faq p {
+     display: none;
+     margin: 10px 0;
+     padding-left: 20px;
+ }
+
+ .contact {
+     display: flex;
+     flex-wrap: wrap;
+     gap: 20px;
+ }
+
+ .contact div {
+     flex: 1;
+     min-width: 200px;
+     text-align: center;
+     padding: 20px;
+     background-color: var(--color2);
+     border-radius: 5px;
+ }
+
+ .contact a {
+     color: var(--color5);
+     text-decoration: none;
+ }
+
+ .support-ticket {
+     display: flex;
+     flex-direction: column;
+     gap: 10px;
+ }
+
+ .support-ticket input,
+ .support-ticket select,
+ .support-ticket textarea,
+ .support-ticket button {
+     width: 100%;
+     max-width: 600px;
+     margin: 0 auto;
+     padding: 10px;
+     border: 1px solid var(--color9);
+     border-radius: 5px;
+ }
+
+ .support-ticket button {
+     background-color: var(--color1);
+     color: var(--color4);
+     border: none;
+     cursor: pointer;
+ }
+
+ footer {
+     text-align: center;
+     padding: 20px;
+     background-color: var(--color6);
+     color: var(--color4);
+     margin-top: 20px;
+ }
+

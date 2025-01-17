@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/withdraw.css">
+    <title>Fund Firm Deposite</title>
+</head>
+
+<body>
+    <header class="header" data-header>
+        <div class="container">
+            <div class="logo">
+                <a href=""><img src="assets/images/firm2.svg" width="300" height="70" id="header" class="img-logo"
+                        alt="FUNDING FIRM LOGO"></a>
+            </div>
+            <nav class="navbar" data-navbar>
+                <ul class="nav-list">
+                    <li class="nav-item"><img src="assets/images/185038_home_house_icon.png" class="img-link" alt=""><a
+                            href="dashboard.html" class="nav-link" data-nav-link>
+                            DashBoard</a></li>
+                    <li class="nav-item"><img src="assets/images/9499384_no_deposit_lie_bribe_icon.png" class="img-link"
+                            alt=""><a href="deposite.html" class="nav-link" data-nav-link>Deposite</a></li>
+                    <li class="nav-item"><img src="assets/images/211635_card_icon.png" class="img-link" alt=""><a
+                            href="withdraw.html" style="border-bottom: 1px solid black;" class="nav-link"
+                            data-nav-link>Withdrawl</a></li>
+                    <li class="nav-item"><img src="assets/images/172475_headset_support_icon.png" class="img-link"
+                            alt=""><a href="#" class="nav-link" data-nav-link>support</a></li>
+                    <li class="nav-item"><img src="assets/images/8324223_ui_essential_app_avatar_profile_icon.png"
+                            class="img-link" width="30" alt=""><a class="nav-link" href="#">profile</a></li>
+                </ul>
+            </nav>
+            <div class="cta">
+                <button class="nav-toggle-btn" aria-label="Toggle menu" data-nav-toggler>
+                    <span class="line line-1" ;"></span>
+                    <span class="line line-2" ;"></span>
+                    <span class="line line-3" ;"></span>
+                </button>
+                <div class="cta-img">
+                    <a href="">
+                        <img src="assets/images/8324223_ui_essential_app_avatar_profile_icon.png" class="nav-avatar"
+                            width="30" alt="">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <h1>Request For Withdrawl</h1>
+            <div class="withdrawl-container">
+                <h2 class="withdrawl-header">CRYPTO CURRENCY:</h2>
+                <div class="withdrawl">
+                    <form action="">
+                        <div class="withdrawl-form">
+                            <label for="">Wallet Address: </label>
+                            <input type="text" name="wallet-address" id="wallet-address" placeholder="wallet-address">
+                        </div>
+                        <div class="withdrawl-form">
+                            <label for="">Amount: </label>
+                            <input type="text" name="wallet-address" id="wallet-address" placeholder="Amount">
+                        </div>
+                        <div class="withdrawl-form">
+                            <label for="">Wallet Address: </label>
+                            <select name="select-currency" id="select-currency">
+                                <option value="select-curreny">BITCOIN</option>
+                                <option value="select-curency">ETHEREUM</option>
+                            </select>
+                        </div>
+                        <button class="withdrawl-button">Request for withdrawl</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="assets/js/deposite.js"></script>
+
+</html>
