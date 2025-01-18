@@ -8,7 +8,7 @@
 :root {
     --color1-: #89a8ba;
     --color2-: #b3c8cf;
-    --color3-: #E5e1DA;
+    --color3-: #e5e1da;
     --color4-: #f1f0e8;
     --color5-: #06141b;
     --color6-: #11212d;
@@ -19,7 +19,7 @@
 }
 
 body {
-    font-family: "Nunito", serif;
+    font-family: "Nunito", sans-serif;
     background: linear-gradient(to right, var(--color3-), var(--color8-));
     display: flex;
     justify-content: center;
@@ -30,13 +30,16 @@ body {
 
 /* Container and Heading */
 .container {
+   
+    align-content: center;
     width: 90%;
     max-width: 1200px;
     background: var(--color4-);
     padding: 30px;
     border-radius: 15px;
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     text-align: center;
+    height: auto;
 }
 
 .container h1 {
@@ -49,12 +52,12 @@ body {
 .form-section {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
+    justify-content: space-around;
+   align-content: center;
+  
 }
 
-.form-section img {
+.formimg img {
     max-width: 350px;
     width: 100%;
     border-radius: 10px;
@@ -83,7 +86,7 @@ input:focus {
     box-shadow: 0 0 5px var(--color1-);
 }
 
-/* Call-to-Action Button */
+/* Button */
 .btn-primary {
     background: var(--color1-);
     color: var(--color5-);
@@ -101,13 +104,9 @@ input:focus {
 
 .form-cta {
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-.form-cta button {
-    padding: 10px 20px;
-    border-radius: 5px;
+    justify-content: space-between;
+    gap: 10px;
+    align-content: center;
 }
 
 /* Link Styling */
@@ -123,15 +122,33 @@ input:focus {
 }
 
 /* Responsive Design */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1000px) {
+
     .form-section {
         flex-direction: column;
         gap: 20px;
     }
-        .form-section img {
-            display: none;
+
+    .formimg img {
+        display: none;
+    }
+        .container .form-section{
+            width: 90%;
         }
-    .form-section img {
-        max-width: 100%;
+}
+
+@media screen and (max-width:500px) {
+    .container h1{
+        font-size: 1.4rem;
+    }
+
+    .btn-primary{
+        padding: 10px 10px;
+        width: 50%;
+        font-size: 0.6rem;
+    }
+    .form-cta a{
+        font-size: 0.6rem;
+        align-content: center;
     }
 }

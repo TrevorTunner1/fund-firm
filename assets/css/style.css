@@ -59,11 +59,19 @@ html{
      animation: l2 1s steps(3) infinite;
  }
 
- @keyframes l2 {
-     to {
-         background-position: 150%
-     }
- }
+@keyframes slideIn {
+
+    0% {
+        transform: translateY(0);
+        background-color: var(--white);
+    }
+
+    100% {
+        transform: translateY(100%);
+        background-color: var(--color5-);
+    }
+
+}
 
 body{
     background-color: var(--color4-);
@@ -190,6 +198,18 @@ color: var(--color4-);
    .nav-toggle-btn {
        padding: 8px 5px;
        margin-inline-start: auto;
+   }
+
+   .nav-toggle-btn.active .line-1 {
+       transform: rotate(45deg) translate(5px, 6px);
+   }
+
+   .nav-toggle-btn.active .line-2 {
+       opacity: 0;
+   }
+
+   .nav-toggle-btn.active .line-3 {
+       transform: rotate(-45deg) translate(4px, -5px);
    }
 /* Main section */
 #hero {
@@ -480,7 +500,7 @@ color: var(--color4-);
                     visibility: visible;
                     transition-duration: 1s;
                    
-                     
+                     transition: all 0.6s ease-in-out;
                  }
 
    .nav-link {

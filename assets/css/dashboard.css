@@ -28,6 +28,44 @@ body{
     background-color: var(--color10-);
 }
 
+body.active {
+    overflow: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--color5-);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: hsl(220, 5%, 20%);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: hsl(220, 5%, 30%);
+}
+
+:focus-visible {
+    outline-offset: 4px;
+}
+
+@keyframes slideIn {
+
+    0% {
+        transform: translateY(0);
+        background-color: var(--white);
+    }
+
+    100% {
+        transform: translateY(100%);
+        background-color: var(--color5-);
+    }
+
+}
+
 
 
 .header .container {
@@ -65,6 +103,7 @@ body{
     height: calc(100vh - 70px);
     /* Full height minus the header */
     background-color: var(--color4-);
+   
 }
 
 .nav-list {
@@ -75,6 +114,7 @@ body{
         justify-content: center; */
     gap: 60px;
     margin-inline: 10px;
+    z-index: 100;
 }
 
 .nav-item{
@@ -94,6 +134,11 @@ body{
     font-weight: 600;
     color: var(--color6-);
     transition: 0.5s ease;
+}
+
+.nav-profile{
+    display: none;
+    
 }
 
 .navbar .nav-link:hover {
@@ -141,6 +186,18 @@ body{
     
 }
 
+   .nav-toggle-btn.active .line-1 {
+       transform: rotate(45deg) translate(5px, 6px);
+   }
+
+   .nav-toggle-btn.active .line-2 {
+       opacity: 0;
+   }
+
+   .nav-toggle-btn.active .line-3 {
+       transform: rotate(-45deg) translate(4px, -5px);
+   }
+
 main {
     display: flex;
     flex-direction: column;
@@ -162,6 +219,7 @@ main .container {
     grid-template-columns: 1fr 1fr;
     gap: 20px;
     place-items: center;
+   
 }
 
 main #client-name{
@@ -220,6 +278,7 @@ main #client-name{
 
                    .cta .nav-toggle-btn {
                        visibility: visible;
+                       
                    }
 .header .navbar {
     position: fixed;
@@ -287,13 +346,19 @@ main #client-name{
                font-size: 1.1rem;
            }
 
+                   .nav-profile {
+                     display:flex;
+                     align-content: center;
+                   }
+
         .nav-avatar {
-            display: none;
+            visibility: hidden;
         }
 
-        main{
-            margin-top: 50px;
-        }
+                  .nav-avatar {
+                      display: none;
+                  }
+         
    }
 
    @media (max-width: 350px) {
